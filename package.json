@@ -1,0 +1,46 @@
+{
+  "name": "diy-hs-toolkit",
+  "version": "0.8.0",
+  "private": true,
+  "description": "BentoBox - DS toolkit",
+  "author": "aboynejames",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:unit": "vitest --environment jsdom --root src/",
+    "test:e2e": "start-server-and-test preview :4173 'cypress run --e2e'",
+    "test:e2e:dev": "start-server-and-test 'vite dev --port 4173' :4173 'cypress open --e2e'",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "electron:serve": "electron ."
+  },
+  "main": "background.js",
+  "dependencies": {
+    "pinia": "^2.0.28",
+    "safeflow": "file:../bentoboxds/src/safeflow-wasm/safeflow.js",
+    "vue": "^3.2.45",
+    "vue-dragscroll": "^4.0.5",
+    "vue-i18n": "^9.2.2",
+    "vue-native-websocket-vue3": "^3.1.7",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.1.4",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/test-utils": "^2.2.6",
+    "cypress": "^12.0.2",
+    "electron": "^21.3.3",
+    "eslint": "^8.22.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-vue": "^9.3.0",
+    "jsdom": "^20.0.3",
+    "prettier": "^2.7.1",
+    "sass": "^1.32.11",
+    "start-server-and-test": "^1.15.2",
+    "vite": "^4.0.0",
+    "vite-plugin-top-level-await": "^1.2.2",
+    "vite-plugin-wasm": "^3.1.0",
+    "vitest": "^0.25.6"
+  }
+}
